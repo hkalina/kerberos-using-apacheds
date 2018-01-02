@@ -72,12 +72,15 @@ Use `stop` command line argument:
 
 The project contains a simple Kerberos keytab generator:
 
-	$ java -classpath kerberos-using-apacheds.jar org.jboss.test.kerberos.CreateKeytab
+	$ java -classpath target/kerberos-using-apacheds.jar org.jboss.test.kerberos.CreateKeytab
 	Kerberos keytab generator
 	-------------------------
 	Usage:
 	java -classpath target/kerberos-using-apacheds.jar org.jboss.test.kerberos.CreateKeytab <principalName> <passPhrase> [<principalName2> <passPhrase2> ...] <outputKeytabFile>
 	
 	$ java -classpath target/kerberos-using-apacheds.jar org.jboss.test.kerberos.CreateKeytab HTTP/localhost@JBOSS.ORG httppwd http.keytab
-	Keytab file was created: /home/kwart/kerberos-tests/http.keytab
+
+	$ java -classpath target/kerberos-using-apacheds.jar org.jboss.test.kerberos.CreateKeytab remote/localhost@JBOSS.ORG remotepwd remote.keytab
+
+	$ java -classpath target/kerberos-using-apacheds.jar org.jboss.test.kerberos.CreateKeytab HTTP/localhost@JBOSS.ORG httppwd remote/localhost@JBOSS.ORG remotepwd both.keytab
 

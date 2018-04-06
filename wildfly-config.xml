@@ -1,0 +1,16 @@
+<configuration>
+    <authentication-client xmlns="urn:elytron:client:1.1">
+        <authentication-rules>
+            <rule use-configuration="conf" />
+        </authentication-rules>
+        <authentication-configurations>
+             <configuration name="conf">
+                 <sasl-mechanism-selector selector="GSSAPI"/>
+                 <credentials>
+                     <!--<local-kerberos mechanism-names="KRB5" />-->
+                     <!--<local-kerberos mechanism-names="KRB5" ccache="FILE:/tmp/krb5cc_1000" debug="true" />-->
+                 </credentials>
+             </configuration>
+        </authentication-configurations>
+    </authentication-client>
+</configuration>
